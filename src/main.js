@@ -1,11 +1,3 @@
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var lang = params.get('lang');
-  if (lang) {
-    localStorage.removeItem('stel.lang');
-    localStorage.setItem('stel.lang', lang);
-  }
-})();
 // Stellarium Web - Copyright (c) 2018 - Noctua Software Ltd
 //
 // This program is licensed under the terms of the GNU AGPL v3, or
@@ -34,6 +26,14 @@ import VueJsonp from 'vue-jsonp'
 import VueCookie from 'vue-cookie'
 
 import App from './App'
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var lang = params.get('lang');
+  if (lang) {
+    localStorage.removeItem('stel.lang');
+    localStorage.setItem('stel.lang', lang);
+  }
+})();
 
 Vue.use(VueCookie)
 
