@@ -26,14 +26,14 @@ import VueJsonp from 'vue-jsonp'
 import VueCookie from 'vue-cookie'
 
 import App from './App'
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var lang = params.get('lang');
+(function () {
+  var params = new URLSearchParams(window.location.search)
+  var lang = params.get('lang')
   if (lang) {
-    localStorage.removeItem('stel.lang');
-    localStorage.setItem('stel.lang', lang);
+    localStorage.removeItem('stel.lang')
+    localStorage.setItem('stel.lang', lang)
   }
-})();
+}())
 
 Vue.use(VueCookie)
 
